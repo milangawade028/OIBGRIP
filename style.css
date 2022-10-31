@@ -1,251 +1,294 @@
 *{
-    padding: 20;
+    padding: 0;
     margin: 0;
     font-family: Verdana, Tahoma, sans-serif;
 }
-html {
-    scroll-behavior: smooth;
-    color: white;
-}
 
 body{
-    background-color: rgb(63, 62, 62);
+    padding-top: 1vh;
+    background-color: #1b1b1b;
+    background-size: unset;
+    background-repeat: repeat;
+    height: 98vh;
+}
+
+nav{
+    display: flex;
+    height: 6%;
+    background-color: #202c33;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
 }
 
 
-#navbardesktop{
+.dpimg{
+    cursor: pointer;
+    border-radius: 100%;
+    width: 5%;
+    height: 5%;
+    height: auto;
+    margin: auto 0px;
+    margin-left: 10px;
+}
+
+.navbar .personalInfo{
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px;
+    margin-left: 2%;
+}
+
+.personalInfo #name{
+    color: #e9edef;
+    margin-bottom: 4px;
+}
+
+.personalInfo #lastseen{
+    color: #8696a0;
+    font-size: small;
+}
+
+
+.scrollable{
+    overflow-y: scroll;
+    color: #fff;
+    display: flex;
+    height: 88%;
+    flex-direction: column;
+    background-image: url('images/bg.webp');
+    align-items: flex-end;
+    position: relative;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    position: relative;
+}
+
+.scrollable .chatting{
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width:none; 
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.scrollable .chatting::-webkit-scrollbar {
     display: none;
-    z-index: 1000;
+  }
+
+#listUL{
+    overflow-y: hidden;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
-#navbar{
-    position: fixed;
-    background-color: rgb(42, 42, 42);
-    min-height: 50px;
-    width: 100vw;
-    transition: all 500ms ease-in-out;
-    text-align: center;
-    z-index: 1000;
-}
-
-.myHamburgerM{
-    width: 100vw;
-    padding: 10px;
-    display:block;
-}
-
-#navbar a{
-    padding: 10px;
+#listUL li{
+    width: 100%;
     text-decoration: none;
-    color: white;
-    display: block;
-    transition: all 500ms;
-    width: 100vw;
-}
-.menus{
-    text-align: center;
-    transition:all 1000ms;
-    display: none;
-    width: 100vw;
-}
-#navbar a:active{
-    background-color:green;
+    flex-direction: row-reverse;
 }
 
-#navbar a:hover{
-    font-size: larger;
+.sent{
+    text-align: end;
+    float: right;
+    width: auto;
+    max-width: 45%;
 }
 
-.newpage1{
-    height:100vh;
-    margin: auto;
-    display: flex;
-    text-align: center;
-}
-
-.newpage1 .centerdiv{
-    margin: auto;
-}
-
-.newpage1 .fh{
-    width: 100%;
-    display: block;
-    margin-bottom: 30px;
-    font-size: 3vh;
-    font-family: cursive;
-}
-
-#linuxSpan{
-    color: orange;
-}
-
-.newpage1 .sh{
-    display: flex;
-    margin: auto;
-    transition:all 1000ms ease-in;
-    height: auto;
-}
-
-.newpage1 .sh img{
-    max-width: 30%;
-    margin: auto;
-}
-
-.newpage1 .socialMedia{
-    position: absolute;
-    bottom: 40px;
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.newpage1 .socialMedia p{
-    margin-left: 15%;
-    margin-right: 15%;
-    font-size: 13px;
-    font-weight: lighter;
-    color: rgb(155, 149, 149);
-    position: relative;
-
-    text-transform: uppercase;
-}
-
-.newpage1 .socialMedia label{
-    position: relative;
-    margin-bottom: 5px;
-}
-
-/* page 2 why linux css starts */
-.newpage2{
-    height: auto;
-    position: relative;
-    display: flex;
-    background-color: #423f3f;
-}
-
-.newpage2 .whyCenter{
-    margin: auto;
-    padding: 100px;
-}
-
-
-.whyCenter .mycard{
-    background-color: rgb(107, 104, 97);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 10px;
-    transition: all 600ms ease-in-out;
-    border-radius: 20px;
-}
-
-.mycard img{
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.mycard p{
-    margin: 20px;
-}
-
-.mycard label{
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-
-
-.whyCenter .mycard:hover{
-    box-shadow: 5px 5px 25px 0px rgb(105, 91, 91);
-
-}
-/* page 3 contact css starts here */
-
-
-.newpage3{
-    background-color: #353131;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-}
-
-
-.newpage3 .socialMedia{
-    width: 100%;
-    text-align: center;
-}
-
-.newpage3 img{
-    margin: 10px;
-    width: 25px;
-    transition: all 300ms ease-in-out;
-}
-
-
-.newpage3 img:hover{
-    width: 37px;
-}
-
-.newpage3 .addMessage{
-    margin: auto;
-    display: flex;
-    text-align: center;
-    min-height: 80%;
-    height: 80%;
-    width: 80%;
-    position: sticky;
-    flex-direction: column;
-}
-
-.newpage3 .add{
-    height: 40%;
-    flex:20% ;
-}
-.newpage3 .msg{
+.green{
+    margin: 5px;
     text-align: start;
-    height: 60%;
+    width: auto;
+    padding: 10px;
+    background-color: #005c4b;
+    border-radius: 15px 15px 0px;
+}
+
+#sentlabel{
+    color: #94bab3;
+    display: block;
+    text-align: end;
+    font-size: x-small;
+}
+
+.recieved{
+    float: left;
+    width: 45%;
+    max-width: 45%;
+    background-color: red;
+
+}
+
+
+.grey{
+    max-width: 45%;
+    margin: 5px;
+    text-align: start;
+    width: auto;
+    padding: 10px;
+    background-color: #202c33;
+    border-radius: 0px 15px 15px;
+}
+
+.grey .mapview{
+    margin: auto;
     display: flex;
-    flex:60% ;
+    padding: 5px;
+}
+
+.add address{
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.map{
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dateLabel{
+    color: #94bab3;
+    display: block;
+    text-align: end;
+    font-size: x-small;
+}
+
+
+/* help menu bold words color  */
+
+.sk .bold{
+    color: rgba(219, 154, 33, 0.822);
+}
+
+
+/* resume thumbnail in received class*/
+.resumeThumbnail{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.downloadSpace{
+    background-color: #1d282f;
+    display: flex;
+    width: 100%;
+}
+.downloadSpace .pdfname{
+    display: flex;
+    width: 100%;
+}
+.pdfname label{
+    margin: auto 0px;
+}
+.downloadSpace img{
+    width: 30px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* this css is used for embedded html in messages */
+.bold{
+    font-weight: bold;
+}
+
+.alink{
+    color: goldenrod;
+    transition: all 600ms ease;
+    text-decoration: none;
+}
+
+.alink:hover{
+    text-decoration: none;
+    color: green;
+}
+
+/* this css is used for social links message */
+
+.social{
+    padding: 10px;
+}
+
+.social .socialItem{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #94bab3;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.social .socialItemI{
+    margin: auto;
+    padding: 10px;
     flex-direction: column;
 }
 
+.social .socialItem:hover{
+    background-color: rgba(58, 170, 58, 0.863);
+}
+#call{
+    flex-direction: column;
+    text-align: center;
+}
 
-.msg input{
-    display: block;
+.number{
+    display: none;
+}
+
+
+
+
+.scrollable .fullScreenDP{
+    transition: all 700ms ease-in-out;
+    position: absolute;;
     width: 100%;
-    margin-bottom: 4%;
-    padding: 15px;
-    border-radius: 15px;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #2f2f2fec;
+    z-index: 1000;
 }
-.content{
+
+.scrollable .fullScreenDP .insideDP{
+    display: flex;
     margin: auto;
-    width: 80%;
+    scrollbar-width: 0px;
 }
 
-.newpage3 h2{
-    margin-bottom: 2%;
-    color: blueviolet;
+.closeBTN{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    margin-left: 6%;
+    margin-top: 5px;
+    cursor: pointer;
+    
 }
 
-.newpage3 p{
-    margin-bottom: 6%;
+.btnColor{
+    fill: rgba(0, 0, 0, 0.692);
+    transition: all 400ms ease-in-out;
 }
 
-.newpage3 button{
-    margin-bottom: 2%;
-    background-color: blueviolet;
-    color: white;
-    font-size: 17px;
-    padding: 15px;
-    outline-width: 0px;
-    outline: none;
-    border: none;
+.closeBTN:hover .btnColor{
+    fill: red;
+}
+
+
+
+.scrollable .fullScreenDP .insideDP .dp{
+    width: 90%;
+    margin: auto;
     border-radius: 10px;
 }
 
@@ -253,126 +296,110 @@ body{
 
 
 
-/* For Desktop View */
+
+
+footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: auto;
+    background-color: #202c33;
+    text-align: center;
+}
+
+.sendBar{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+.sendBar svg{
+    margin: auto;
+    height: 40%;
+    min-height: 40%;
+
+}
+
+.sendBar input[type='text']{
+    margin: auto;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    float: left;
+    width: 80%;
+    height: 100%;
+    outline-color: transparent;
+    accent-color: transparent;
+    background-color: #2a3942;
+    outline: none;
+    border-color: transparent;
+}
+
+
+::placeholder { 
+    color: #8696a0;
+    opacity: 1; 
+  }
+  
+  :-ms-input-placeholder { 
+    color: #8696a0;
+  }
+  
+  ::-ms-input-placeholder { 
+    color: #8696a0;
+  }
+
+
+
 @media screen and (min-width: 1024px) {
-    #navbar{
-        display: none;
-    }
 
-
-    #navbardesktop{
-        transition: all 500ms ease-in-out;
-        display: flex;
-        width: 100%;
-        position: fixed;
-        background-color: #3f3e3e;
-    }
-
-    .logo{
-        padding-left: 30px;
-        flex: 30%;
-        display: block;
-        float: left;
+    body{
         margin: auto;
-        font-size: 30px;
-        font-family: cursive;
+        width: 50vw;
     }
 
-    .logo a{
-        text-decoration: none;
-        color: white;
+    .sendBar{
+        width: 85%;
     }
 
-    .navitems{
-        align-self: flex-end;
-        display: flex;
-        float: right;     
+    .scrollable{
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+        position: relative;
+        overflow: hidden;
     }
 
-    .navitems ul{
-        display: flex;
-        float: right;    
-        padding: 20px;
-        list-style-type: none; 
-    }
-
-    .navitems li{
-        margin: 10px;
-    }
-
-    .navitems a{
-        color: white;
-        text-decoration: none;
-        transition: all 500ms ease-in-out;
-    }
-
-   
-    .navitems li a:hover{
-        color: greenyellow;
-        
-    }
-
-
-
-    /* page 2 css for desktop */
-
-    .newpage2{
-        min-height: 100vh;
-        height: auto;
-    }
-
-    .newpage2 .whyCenter{
-        display: flex;
-        flex-direction: row;
-    }
     
 
-    .mycard{
-        flex: 50%;
-        margin: 30px;
-        max-width: 300px;
-        max-height: 60%;
+    .scrollable .fullScreenDP{
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
     }
 
 
+    .scrollable .fullScreenDP .insideDP{
+        display: flex;
+        width: 70%;
+    }
 
 
-    /* page 3 css for desktop */
+    .scrollable .fullScreenDP .dp{
+        width: 50%;
+        margin: auto;
+    }
 
+    .scrollable .closeBTN{
+        margin-top: 15px;
+    }
 
-
-.newpage3 .addMessage{
-    margin: auto;
-    display: flex;
-    height: 80%;
-    width: 80%;
-    flex-direction: row-reverse;
+    #call:hover .number{
+        display: block;
+        height: auto;
+    }
 }
-
-.newpage3 .add{
-    height: 70%;
-    margin: auto;
-    flex:30% ;
-    float: left;
-}
-.newpage3 .msg{
-    color: white;
-    height: 70%;
-    margin: auto;
-    float: right;
-    flex:60% ;
-    text-align: start;
-}
-
-.newpage3 .msg{
-    text-align: start;
-    height: 60%;
-    display: flex;
-    flex:60% ;
-    flex-direction: column;
-}
-
-
-
-
-  }
